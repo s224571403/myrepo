@@ -1,0 +1,112 @@
+---
+title: "RNA-Seq Analysis, Growth Data Analysis, and Biological Sequence Diversity
+  in Comparative Genomics"
+author: "Aish, Swanitha, Shreshta"
+date: "2024-10-11"
+output: html_document
+---
+```{r}
+install.packages("R.utils")
+library(R.utils)
+```
+ī
+```{r}
+install.packages("seqinr")
+library(seqinr)
+```
+
+
+```{r}
+# Define the URL for the gene expression data
+URL<- "https://raw.githubusercontent.com/ghazkha/Assessment4/main/gene_expression.tsv"
+pip=read.table(URL,stringsAsFactors = FALSE, header= TRUE,row.names = 1)
+pip
+str(pip)
+# Display the values for the first six genes
+head(pip, 6)
+```
+
+
+```{r}
+pip=colMeans(t(pip))
+head(pip, 6)
+```
+
+
+```{r}
+pip <- as.data.frame(pip)
+pip$Mean_Expression <- rowMeans(pip)
+top_10_genes <- head(ordered_pip, 10)
+print(top_10_genes)
+```
+
+
+```{r}
+pip <- as.data.frame(pip)
+pip$Mean_Expression <- rowMeans(pip)
+num_genes_low_mean <- sum(pip$Mean_Expression < 10)
+print(num_genes_low_mean)
+
+```
+
+
+```{r}
+hist(pip$Mean_Expression,
+     main = "Histogram of Mean Expression Values",
+     xlab = "Mean Expression",
+     ylab = "Frequency",
+     col = "lightblue",
+     border = "black")
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
