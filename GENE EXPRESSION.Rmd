@@ -66,6 +66,12 @@ git init
 
 
 ```{r}
+hist(pip$Mean_Expression,
+main = "Histogram of Mean Expression Values",
+xlab = "Mean Expression",
+ylab = "Frequency",
+col = "lightblue",
+border = “black")
 ```
 
 
